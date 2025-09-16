@@ -97,7 +97,7 @@ struct Artwork {
     name: String,
 }
 
-fn admire_artwork(art: &Artwork) { // ampersand appears, it means this function only works with a referrences to an Artwork, now owned one
+fn admire_artwork(art: &Artwork) { // ampersand appears, it means this function only works with a references to an Artwork, now owned one
     println!("Wow, it's {}", art.name);
 }
 
@@ -170,6 +170,6 @@ For more information about this error, try `rustc --explain E0382`.
 error: could not compile `ownership-and-borrowing` (bin "ownership-and-borrowing") due to 1 previous error
 ```
 
-Because ownership of the value of `art1` was moved to `art` in `remove_artwork` and discarded when `remove_artwork` complete -> `&art1` is a invalid referrence.
+Because ownership of the value of `art1` was moved to `art` in `remove_artwork` and discarded when `remove_artwork` complete -> `&art1` is a invalid reference.
 
 
