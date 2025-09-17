@@ -14,4 +14,32 @@ fn main() {
 
     println!("{}", art2.name);
     println!("{}", art3.name);
+
+
+
+
+    let mut x = String::new();
+    let mut y = String::with_capacity(10_000_000);
+    for i in 0..100000 {
+        y.push('.')
+    }
+    println!("{}", x.len());
+    println!("{}", y.len());
+
+
+
+    let value = String::new();
+    print_admiration(value.as_str());
+
+
+    let value2= "abc";
+    print_admiration2(value2.to_string())
+}
+
+fn print_admiration(name: &str) {
+    println!("{} is great", name);
+}
+
+fn print_admiration2(name: String) {
+    println!("{} is great", name);
 }
