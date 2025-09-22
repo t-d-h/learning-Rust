@@ -18,7 +18,7 @@ fn main() {
             .read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = guess // Shadowing this var, instead of creating new one (guess_str)
+        let guess: u32 = guess // Overshadowing this var, instead of creating new one (guess_str)
             .trim() // trim spaces at the begining and the end of this string and eliminate \n of read_line (user have to press Enter)
             .parse() // convert this var to destination type, we specified u32
             .expect("Please type a number!"); // error handling when Rust can't convert this string
